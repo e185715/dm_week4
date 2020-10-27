@@ -7,4 +7,4 @@ X,Y = datasets.load_linear_example1()
 
 model = regression.LinearRegression()
 print(model.fit(X,Y))
-print(model.theta)
+print(model.score(X,Y))
