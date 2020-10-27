@@ -1,4 +1,10 @@
+import importlib
+import regression
 import datasets
 
+importlib.reload(regression)
 X,Y = datasets.load_linear_example1()
-print(X)
+
+model = regression.LinearRegression()
+print(model.fit(X,Y))
+print(model.theta)
